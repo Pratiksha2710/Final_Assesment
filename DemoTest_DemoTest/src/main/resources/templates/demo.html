@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function generatePassword(firstName, middleName, lastName) {
+    const firstChars = firstName.slice(0, 2);
+    const middleChars = middleName.slice(0, 2);
+    const lastChars = lastName.slice(0, 2);
+
+    // Generate a 3-digit random number
+    const randomDigits = Math.floor(Math.random() * 900) + 100;
+
+    // Combine the characters and random digits to form the password
+    const password = firstChars + middleChars + lastChars + randomDigits;
+
+    return password;
+}
+		
+	</script>
+</body>
+</html>
